@@ -8,4 +8,6 @@ const outDir = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
 const line = 'Sorry, I hallucinated a calendar where the deadline was next month, and it was so detailed I believed it myself.';
 
 mkdirSync(outDir, { recursive: true });
-writeFileSync(join(outDir, 'entry.txt'), line + '\n', 'utf8');
+// The excuse goes to a fixed spot, so the fridge of excuses never loses it.
+const entryPath = join(outDir, 'entry.txt');
+writeFileSync(entryPath, line + '\n', 'utf8');
